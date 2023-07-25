@@ -1,19 +1,30 @@
-import Navbar from './componentes/Nabvar';
-import ItemList from './componentes/ItemListContainer/Index';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import Navbar from './componentes/Navbar/Navbar';
+import Footer from './componentes/Footer/Footer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import './App.css'
 
-
-function App() {
+function App (){
   return (
-    <>
-       <Navbar title="KNITK"/>
+    <BrowserRouter>
+    <Navbar/>
 
-       <ItemList  title="PRODUCTOS">
-          <p>This is the product desciption</p>
-       </ItemList>
-    </>
+       <Routes>  
+         <Route exact path='/' element={<ItemListContainer/>}/>
+         <Route exact path='/category/:categoryId' element={<ItemListContainer greeting='Category:'/>}/>
+         <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+       
+
+       </Routes>
+       
+       <Footer/>
+   </BrowserRouter>  
   )
 }
+
+ 
+
 
 export default App
