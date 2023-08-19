@@ -1,24 +1,19 @@
+import { CartContext } from "../../context/CartContext";
+import React, { useContext } from "react";
 
-const CartWidget = (propiedades)=>{
+const CartWidget = ()=>{
+    const {cartQuantity} = useContext(CartContext)
+
     return(
-        <div 
-            className="button" 
-            onClick={propiedades.handleClick} 
-            style={{
-                backgroundColor: 'white',
-                borderRadius: '8px',
-                margin: '50px',
-                alignItems: 'center',
-                display: 'flex',
-                }
-                }>
-
-                <div className="cart">
-                    <img src="../images/cart.png" alt=""/>
-                    <h6 className='cartItems'>3</h6>
+        <div>
+            <div className="cart">
+                <img src="../images/cart2.png" alt=""/>
+                {cartQuantity() > 0 && 
+                <div className="quantityCart">
+                <h6 className='cartItems'>{cartQuantity()}</h6>
                 </div>
-        
-                {propiedades.children}
+                }
+            </div>
         </div>
     )
 }
