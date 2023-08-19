@@ -36,7 +36,7 @@ To get this project up and running on your local machine, follow these steps:
 1. **Clone the Repository**: Use `git clone` to clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/knitk-ecommerce.git
+   git clone https://github.com/karifermor/knitk-ecommerce.git
    ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies using npm or yarn.
