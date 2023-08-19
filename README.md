@@ -51,10 +51,38 @@ To get this project up and running on your local machine, follow these steps:
 4. **Start the Development Server**: Run the development server to see the website in action.
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. **Open in Browser**: Open your web browser and navigate to `http://localhost:3000` to view the website.
+
+## Installing Dependencies
+Before running the project, make sure you have the following dependencies installed:
+
+- Node.js: If you don't have Node.js installed, download and install it from nodejs.org.
+Project Dependencies
+This project relies on the following dependencies, which will be installed when you run npm install:
+
+- Firebase:
+  - Description: Firebase is used for authentication and serverTimestamp.
+  - Installation: No additional steps required, as it's already included in the project's `package.json`.
+
+- React:
+  - Description: The website is built using the React JavaScript library.
+  - Installation: No additional steps required, as it's already included in the project's `package.json`.
+
+- React DOM:
+  - Description: React DOM is used for rendering React components in the browser.
+  - Installation: No additional steps required, as it's already included in the project's `package.json`.
+
+- React Router DOM:
+  - Description: React Router DOM is used for managing navigation in the application.
+  - Installation: No additional steps required, as it's already included in the project's `package.json`.
+
+To install these dependencies manually in another project, you can use the following command:
+ ```bash
+  npm install firebase react react-dom react-router-dom
+   ```
 
 ## Folder Structure
 
